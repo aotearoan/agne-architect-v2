@@ -1,0 +1,11 @@
+{
+  "paths": {
+    "src": "./app",
+    "dest": "./dist",
+    "vendorjs": [
+      "vendors/angular/angular.js",
+      "vendors/angular-animate/angular-animate.js",
+      "vendors/angular-route/angular-route.js"
+    ]
+  }
+}
