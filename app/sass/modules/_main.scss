@@ -1,0 +1,101 @@
+@import "spacing";
+@import "fonts";
+
+html,body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $body-font;
+  font-weight: 200;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font;
+  letter-spacing: 2px;
+}
+
+.skills-graph {
+  li {
+    width: 100%;
+    background-color: $base-plus;
+    position: relative;
+    list-style: none;
+    padding-left: 5px;
+
+    p {
+      z-index: 2;
+      color: white;
+      font-weight: 400;
+      position: relative;
+    }
+
+    .percent {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      display: block;
+      height: 100%;
+      background-color: $accent-1;
+      z-index: 1;
+      margin-right: auto;
+      width: 0%;
+    }
+
+    .skill-1 {
+      @include transition(width 1s ease-in-out 0.5s);
+    }
+
+    .skill-2 {
+      @include transition(width 1s ease-in-out .55s);
+    }
+
+    .skill-3 {
+      @include transition(width 1s ease-in-out .6s);
+    }
+
+    .skill-4 {
+      @include transition(width 1s ease-in-out .65s);
+    }
+
+    .percent-70 {
+      width: 70%;
+    }
+
+    .percent-75 {
+      width: 75%;
+    }
+
+    .percent-80 {
+      width: 80%;
+    }
+
+    .percent-85 {
+      width: 85%;
+    }
+  }
+}
+
+.checklist {
+  li {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  li:before {
+    margin-right: 10px;
+    color: $accent-1;
+  }
+}
+
+.disclaimer {
+  font-weight: 200;
+  font-size: 1.15em;
+  opacity: .25;
+  position: absolute;
+  bottom: 0;
+  color: $footer-text;
+}

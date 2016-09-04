@@ -1,0 +1,9 @@
+$heading-font: "Rozha One", sans-serif;
+$body-font: Raleway, sans-serif;
+
+.fa-li span {
+  font: inherit;
+  color: #333;
+  font-family: $body-font;
+  font-weight: 100;
+}

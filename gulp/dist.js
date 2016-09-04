@@ -5,5 +5,5 @@ gulp.task('dist', function() {
   return runSequence(
       ['clean'],
       ['vendor-styles', 'vendor-scripts'],
-      ['styles', 'images', 'scripts', 'templates', 'html']);
+      ['styles', 'images', 'scripts', 'templates', 'html', 'fonts']);
 });

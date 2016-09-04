@@ -1,23 +1,142 @@
 <!DOCTYPE html>
-<html ng-app="SampleApp">
-  <head lang="en">
+<html ng-app="AgnesApp" ng-controller="AgnesController">
+<head lang="en">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>ȧgnē-architect.com</title>
+    <title>agne-architect.com</title>
     <!-- styles -->
+    <link href="https://fonts.googleapis.com/css?family=Rozha+One|Raleway:300,500&subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/vendor.min.css"/>
     <link rel="stylesheet" href="css/app.min.css"/>
-  </head>
-  <body>
+</head>
+<body>
+<header id="top" ng-class="{ 'open-nav': showMobileMenu, 'sticky': stickyMenu }">
     <div class="container">
-      <h1>ȧgnē-architect.com</h1>
-      <!-- views -->
-      <div ng-view></div>
+        <a class="logo" href="#">A/E</a>
+
+        <div class="mobile-toggle" ng-click="mobileToggle()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a ng-click="anchorScroll('top')" ng-class="{'active': activeLink == 'top'}">Home</a></li>
+                <li><a ng-click="anchorScroll('about')" ng-class="{'active': activeLink == 'about'}">About</a></li>
+                <li><a ng-click="anchorScroll('projects')" ng-class="{'active': activeLink == 'projects'}">Projects</a></li>
+                <li><a ng-click="anchorScroll('contact')" ng-class="{'active': activeLink == 'contact'}">Contact</a></li>
+            </ul>
+        </nav>
     </div>
-    <!-- scripts -->
-    <script src="js/vendor.min.js"></script>
-    <script src="js/app.min.js"></script>
-  </body>
+</header>
+<main>
+    <div class="hero">
+        <h1><span>Agnė Erickson</span><br>Architect</h1>
+
+        <div class="mouse" ng-click="anchorScroll('about')">
+            <span></span>
+        </div>
+    </div>
+    <div class="container">
+        <div id="about" class="row min-height-section pt+">
+            <h4>About Me</h4>
+
+            <div class="row">
+                <div class="three columns center">
+                    <span><i class="fa fa-4x fa-map-marker"></i></span>
+                    <h6>Location</h6>
+                    <p class="center">Zürich, Switzerland</p>
+                </div>
+                <div class="three columns center">
+                    <span><i class="fa fa-4x fa-flag"></i></span>
+                    <h6>Nationality</h6>
+                    <p class="center">Lithuanian</p>
+                </div>
+                <div class="three columns center">
+                    <span><i class="fa fa-4x fa-globe"></i></span>
+                    <h6>Languages</h6>
+                    <ul>
+                        <li>Lithuanian (Native)</li>
+                        <li>English</li>
+                        <li>German (B2)</li>
+                        <li>Polish</li>
+                        <li>Russian</li>
+                    </ul>
+                </div>
+                <div class="three columns center">
+                    <span><i class="fa fa-4x fa-mortar-board"></i></span>
+                    <h6>Education</h6>
+                    <ul>
+                        <li>B. Arch. Vilnius Gediminas Technical University (2002)</li>
+                        <li>M. Arch. Vilnius Gediminas Technical University (2005)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="twelve columns">
+                    <h4>Experience</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="six columns">
+                    <h4>Skills</h4>
+                    <ul class="skills-graph">
+                        <li><span class="percent skill-1" ng-class="{'percent-80': activeLink == 'about'}"></span><p>Archicad</p></li>
+                        <li><span class="percent skill-2" ng-class="{'percent-75': activeLink == 'about'}"></span><p>Artlantis</p></li>
+                        <li><span class="percent skill-3" ng-class="{'percent-70': activeLink == 'about'}"></span><p>Autocad</p></li>
+                        <li><span class="percent skill-4" ng-class="{'percent-70': activeLink == 'about'}"></span><p>Liasing with clients</p></li>
+                    </ul>
+                </div>
+                <div class="six columns">
+                    <h4>Expertise</h4>
+                    <ul class="checklist fa-ul">
+                        <li class="fa-li fa fa-check"><span>Individual houses</span></li>
+                        <li class="fa-li fa fa-check"><span>Apartment blocks</span></li>
+                        <li class="fa-li fa fa-check"><span>Commercial objects</span></li>
+                        <li class="fa-li fa fa-check"><span>Industrial objects</span></li>
+                        <li class="fa-li fa fa-check"><span>Extensions and Reconstructions</span></li>
+                        <li class="fa-li fa fa-check"><span>Urban planning</span></li>
+                        <li class="fa-li fa fa-check"><span>Interior design</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="projects" class="row gallery pt+">
+            <h4>Projects</h4>
+            <p>Coming soon...</p>
+        </div>
+    </div>
+    </div>
+</main>
+<footer id="contact" class="u-full-width">
+    <div class="container min-height-section pt+">
+        <div class="row">
+            <h4>Contact</h4>
+            <div>
+                <p>Thanks for taking the time to checkout my website. If you're interested in my work and would like to get in touch, feel free to contact me via the links below.</p>
+                <ul>
+                    <li><a href="mailto:agne@agne-architect.com"><i class="fa fa-2x fa-envelope"></i></a></li>
+                    <li><a href="docs/agne-erickson-cv.pdf" title="Download my portfolio"><i class="fa fa-2x fa-download"></i></a></li>
+                    <li><a href="http://www.linkedin.com" title="LinkedIn"><i class="fa fa-2x fa-linkedin"></i></a></li>
+                    <li><a href="http://www.behance.com" title="Behance"><i class="fa fa-2x fa-behance"></i></a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Links</h5>
+                <ul>
+                   <li></li>
+                </ul>
+            </div>
+            <p class="disclaimer">&copy; Agne Erickson {{ year }}</p>
+        </div>
+    </div>
+</footer>
+<!-- scripts -->
+<script src="js/vendor.min.js"></script>
+<script src="js/app.min.js"></script>
+</body>
 </html>

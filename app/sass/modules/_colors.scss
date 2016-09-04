@@ -1,0 +1,51 @@
+$primary: #000000;
+$accent-1: #B1003D;
+$accent-2: #20a1e2;
+$footer-text: #fff;
+$text: $primary;
+$base: whitesmoke;
+$highlight: $base;
+$base-plus: #eeeeee;
+
+$anchor: $accent-1;
+$anchor-hover: lighten($accent-1, 10%);
+
+body {
+  background-color: $base;
+  color: $primary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $primary;
+}
+
+a {
+  color: $anchor;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $anchor-hover;
+}
+
+footer {
+  background-color: $primary;
+
+  h4, p {
+    color: $footer-text;
+  }
+}
+
+i.fa {
+  color: $accent-1;
+}
+
+@include selection {
+  background-color: $accent-1;
+}
+
+body {
+  @include selection(true) {
+    background-color: $accent-1;
+  }
+}

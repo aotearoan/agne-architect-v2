@@ -3,9 +3,9 @@
     "src": "./app",
     "dest": "./dist",
     "vendorjs": [
-      "vendors/angular/angular.js",
-      "vendors/angular-animate/angular-animate.js",
-      "vendors/angular-route/angular-route.js"
+      "app/vendors/angular/angular.js",
+      "app/vendors/angular-animate/angular-animate.js",
+      "app/vendors/angular-route/angular-route.js"
     ]
   }
 }
