@@ -21,19 +21,7 @@
                 $scope.activeLink = 'top';
                 $scope.year = new Date().getFullYear();
 
-                var anchors = [{
-                    name: 'top',
-                    position: elmYPosition('top')
-                }, {
-                    name: 'projects',
-                    position: elmYPosition('projects')
-                }, {
-                    name: 'about',
-                    position: elmYPosition('about')
-                }, {
-                    name: 'contact',
-                    position: elmYPosition('contact')
-                }];
+                var anchors = ['top', 'projects','about','contact'];
 
                 $scope.mobileToggle = function () {
                     $scope.showMobileMenu = !$scope.showMobileMenu;
@@ -58,8 +46,8 @@
                     var active = $scope.activeLink;
 
                     for (var i = 0; i < anchors.length; i++) {
-                        if (yOffset >= anchors[i].position - 1) {
-                            active = anchors[i].name;
+                        if (yOffset >= elmYPosition(anchors[i]) - 1) {
+                            active = anchors[i];
                         }
                     }
 
