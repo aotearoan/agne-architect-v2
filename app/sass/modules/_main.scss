@@ -110,6 +110,7 @@ h2:before {
   color: rgba($primary, .5);
   padding-top: 9px;
   padding-left: 10px;
+  white-space: no-wrap;
 
   &:first-child {
   counter-reset: customlistcounter;

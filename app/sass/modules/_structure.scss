@@ -24,13 +24,8 @@ p {
   text-align: justify;
 }
 
-ul {
-  margin-left: 30px;
-
-  li {
-    list-style-position: outside;
-    list-style-type: square;
-  }
+ul > li {
+  list-style-type: none;
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
