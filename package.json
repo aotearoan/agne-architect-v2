@@ -31,7 +31,6 @@
   "homepage": "https://github.com/aotearoan/agne-architect-v2#readme",
   "devDependencies": {
     "bower": "1.7.9",
-    "browser-sync": "2.14.3",
     "del": "2.2.2",
     "gulp": "3.9.1",
     "gulp-concat": "2.6.0",
@@ -44,6 +43,7 @@
   "dependencies": {
     "bourbon": "^4.2.7",
     "bower": "^1.7.9",
+    "browser-sync": "2.14.3",
     "browserify": "^13.1.0",
     "del": "^2.2.2",
     "eslint-plugin-standard": "^2.0.1",
