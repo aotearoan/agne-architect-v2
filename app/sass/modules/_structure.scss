@@ -1,6 +1,5 @@
 .row {
   width: 100%;
-  max-width: 940px;
   margin: 0 auto;
   position: relative;
 }
@@ -10,17 +9,44 @@
 }
 
 .min-height-section {
-  min-height: 930px;
+  min-height: 100vh;
 }
 
 .center {
   text-align: center;
 }
 
-main .container {
-  top: -20px;
+.left {
+  text-align: left;
 }
 
 p {
   text-align: justify;
+}
+
+ul {
+  margin-left: 30px;
+
+  li {
+    list-style-position: outside;
+    list-style-type: square;
+  }
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.separator {
+  border-bottom: 1px solid rgba($primary, .5);
+
+  div {
+    width: 33%;
+    height: 4px;
+    background-color: $primary;
+  }
+}
+
+.row {
+  margin-bottom: 5rem;
 }

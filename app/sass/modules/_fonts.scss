@@ -1,9 +1,20 @@
-$heading-font: "Rozha One", sans-serif;
-$body-font: Raleway, sans-serif;
+@font-face {
+  font-family: 'Montserrat';
+  url: ('fonts/Montserrat-Regular.ttf')  format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  url: ('fonts/Montserrat-Bold.ttf')  format('truetype');
+  font-weight: bold;
+}
+
+$heading-font: Montserrat, sans-serif;
+$body-font: 'Source Sans Pro', sans-serif;
 
 .fa-li span {
   font: inherit;
-  color: #333;
   font-family: $body-font;
   font-weight: 100;
 }

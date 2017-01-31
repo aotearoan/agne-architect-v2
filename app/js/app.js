@@ -1,61 +1,82 @@
 (function () {
 
-  'use strict';
+    'use strict';
 
-  angular.module('AgnesApp', ['smooth.scroll'])
-      .controller('AgnesController', ['$scope', '$location', '$window', 'anchorSmoothScroll',
-        function ($scope, $location, $window, anchorSmoothScroll) {
+    angular.module('AgnesApp', ['ngCookies', 'smooth.scroll', 'app.translation', 'app.projects'])
+        .filter('translate', ['$cookies', 'translateService', function($cookies, translateService) {
+            return function(key, lang) {
+                return translateService.translate(key, lang);
+            };
+        }])
+        .controller('AgnesController', ['$scope', '$cookies', '$location', '$window', 'anchorSmoothScroll', 'translateService', 'projectService',
+            function ($scope, $cookies, $location, $window, anchorSmoothScroll, translateService, projectService) {
 
-          $scope.showMobileMenu = false;
-          $scope.stickyMenu = false;
-          $scope.activeLink = 'top';
-          $scope.year = new Date().getFullYear();
+                $scope.languages = translateService.languages;
+                $scope.language = $cookies.get('language') || 'de';
 
-          var anchors = [{
-            name: 'top',
-            position: elmYPosition('top')
-          }, {
-            name: 'about',
-            position: elmYPosition('about')
-          }, {
-            name: 'projects',
-            position: elmYPosition('projects')
-          }, {
-            name: 'contact',
-            position: elmYPosition('contact')
-          }];
+                $scope.projects = projectService.projects;
 
-          $scope.mobileToggle = function() {
-            $scope.showMobileMenu = !$scope.showMobileMenu;
-          };
+                $scope.showMobileMenu = false;
+                $scope.stickyMenu = false;
+                $scope.activeLink = 'top';
+                $scope.year = new Date().getFullYear();
 
-          $scope.anchorScroll = function(element) {
-            if ($scope.showMobileMenu) {
-              $scope.showMobileMenu = false;
-            }
-            anchorSmoothScroll.scrollTo(element);
-            $scope.activeLink = element;
-          };
+                var anchors = [{
+                    name: 'top',
+                    position: elmYPosition('top')
+                }, {
+                    name: 'projects',
+                    position: elmYPosition('projects')
+                }, {
+                    name: 'about',
+                    position: elmYPosition('about')
+                }, {
+                    name: 'contact',
+                    position: elmYPosition('contact')
+                }];
 
-          angular.element($window).bind('scroll', function () {
-            var yOffset = this.pageYOffset || 0;
-            $scope.stickyMenu = yOffset >= 100;
-            $scope.updateActiveLink(yOffset);
-            $scope.$apply();
-          });
+                $scope.mobileToggle = function () {
+                    $scope.showMobileMenu = !$scope.showMobileMenu;
+                };
 
-          $scope.updateActiveLink = function(yOffset) {
-            var active = $scope.activeLink;
+                $scope.anchorScroll = function (element) {
+                    if ($scope.showMobileMenu) {
+                        $scope.showMobileMenu = false;
+                    }
+                    anchorSmoothScroll.scrollTo(element);
+                    $scope.activeLink = element;
+                };
 
-            for (var i=0;i<anchors.length;i++) {
-              if (yOffset >= anchors[i].position -1) {
-                active = anchors[i].name;
-              }
-            }
+                angular.element($window).bind('scroll', function () {
+                    var yOffset = this.pageYOffset || 0;
+                    $scope.stickyMenu = yOffset >= 100;
+                    $scope.updateActiveLink(yOffset);
+                    $scope.$apply();
+                });
 
-            $scope.activeLink = active;
+                $scope.updateActiveLink = function (yOffset) {
+                    var active = $scope.activeLink;
 
-          };
+                    for (var i = 0; i < anchors.length; i++) {
+                        if (yOffset >= anchors[i].position - 1) {
+                            active = anchors[i].name;
+                        }
+                    }
 
-        }]);
+                    $scope.activeLink = active;
+
+                };
+
+                $scope.changeLanguage = function(newLang) {
+                    var now = new $window.Date(),
+                        // this will set the expiration to 6 months
+                        exp = new $window.Date(now.getFullYear()+50, now.getMonth(), now.getDate());
+
+                    $cookies.put('language', newLang , {
+                        expires: exp
+                    });
+
+                    $scope.language = newLang;
+                };
+            }]);
 }());

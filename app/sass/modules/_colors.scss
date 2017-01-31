@@ -1,14 +1,10 @@
 $primary: #000000;
-$accent-1: #B1003D;
-$accent-2: #20a1e2;
-$footer-text: #fff;
-$text: $primary;
-$base: whitesmoke;
-$highlight: $base;
-$base-plus: #eeeeee;
+$base: #fff;
+$base-plus: #eee;
+$accent: #e26a00;
 
-$anchor: $accent-1;
-$anchor-hover: lighten($accent-1, 10%);
+$anchor: $accent;
+$anchor-hover: lighten($accent, 10%);
 
 body {
   background-color: $base;
@@ -31,21 +27,21 @@ a:hover {
 footer {
   background-color: $primary;
 
-  h4, p {
-    color: $footer-text;
+  h2, p {
+    color: $base;
   }
 }
 
 i.fa {
-  color: $accent-1;
+  color: $accent;
 }
 
 @include selection {
-  background-color: $accent-1;
+  background-color: $accent;
 }
 
 body {
   @include selection(true) {
-    background-color: $accent-1;
+    background-color: $accent;
   }
 }

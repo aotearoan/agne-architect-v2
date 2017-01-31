@@ -1,0 +1,64 @@
+.hero {
+  position: relative;
+  background: url(/img/hero.jpg) no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  min-height: 100vh;
+  letter-spacing: 2px;
+
+  .heading {
+
+    background-color: $primary;
+    padding-left: 9vmin;
+    padding-top: 6vmin;
+    padding-right: 9vmin;
+    padding-bottom: 1vmin;
+    max-width: 50%;
+    margin-left: auto;
+    font-size: 6vmin;
+    font-weight: bold;
+
+    h1 {
+      font-size: 3vmin;
+      letter-spacing: 0;
+      color: $base;
+      text-align: left;
+      font-weight: normal;
+
+      span {
+        font-size: 6vmin;
+        letter-spacing: -0.5vmin;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.mouse {
+  display: block;
+  width: 26px;
+  height: 46px;
+  border-radius: 13px;
+  border: 2px solid $accent;
+  background-color: rgba($accent, .8);
+  position: absolute;
+  bottom: 40px;
+  left: 50.7%;
+  margin: 0 auto 0 -26px;
+  cursor: pointer;
+
+  span {
+    display: block;
+    margin: 6px auto;
+    width: 2px;
+    height: 2px;
+    border-radius: 13px;
+    background: $base;
+    border: 1px solid transparent;
+    @include animation-duration(1s);
+    @include animation-fill-mode(both);
+    @include animation-iteration-count(infinite);
+    @include animation-name(scroll);
+  }
+}

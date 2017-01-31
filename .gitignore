@@ -32,3 +32,6 @@ dist
 vendors
 
 .tmp
+.DS_Store
+
+bower_components

@@ -1,7 +1,7 @@
 {
-  "name": "agne-architect-v2",
+  "name": "agne-architect,com",
   "version": "1.0.0",
-  "description": "Agne Architect V2",
+  "description": "Agne Architect",
   "main": "index.js",
   "scripts": {
     "test": "test"

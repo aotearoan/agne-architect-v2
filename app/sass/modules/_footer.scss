@@ -1,6 +1,14 @@
 footer {
-  ul li {
-    display: inline-block;
-    margin-right: 20px;
+  h2:before {
+    background-color: $base;
+  }
+
+  .links {
+    margin-left: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 3rem;
+    }
   }
 }

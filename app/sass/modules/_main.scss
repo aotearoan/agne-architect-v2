@@ -14,10 +14,28 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $heading-font;
-  letter-spacing: 2px;
+  color: $primary;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h2 {
+  padding-top: 4rem;
+  vertical-align: top;
+}
+
+h2:before {
+  content: "";
+  display: inline-block;
+  background-color: $primary;
+  width: 9rem;
+  height: 3rem;
+  margin-right: 3rem;
 }
 
 .skills-graph {
+  margin-left: 0;
+
   li {
     width: 100%;
     background-color: $base-plus;
@@ -27,37 +45,23 @@ h1, h2, h3, h4, h5, h6 {
 
     p {
       z-index: 2;
-      color: white;
+      color: $base;
       font-weight: 400;
       position: relative;
     }
 
     .percent {
       position: absolute;
-      top: 0px;
-      left: 0px;
+      top: 0;
+      left: 0;
       display: block;
       height: 100%;
-      background-color: $accent-1;
+      background-color: $accent;
       z-index: 1;
-      margin-right: auto;
-      width: 0%;
     }
 
-    .skill-1 {
-      @include transition(width 1s ease-in-out 0.5s);
-    }
-
-    .skill-2 {
-      @include transition(width 1s ease-in-out .55s);
-    }
-
-    .skill-3 {
-      @include transition(width 1s ease-in-out .6s);
-    }
-
-    .skill-4 {
-      @include transition(width 1s ease-in-out .65s);
+    .percent-60 {
+      width: 60%;
     }
 
     .percent-70 {
@@ -87,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 
   li:before {
     margin-right: 10px;
-    color: $accent-1;
+    color: $accent;
   }
 }
 
@@ -97,5 +101,29 @@ h1, h2, h3, h4, h5, h6 {
   opacity: .25;
   position: absolute;
   bottom: 0;
-  color: $footer-text;
+  color: $base;
+}
+
+.image-labels {
+  list-style-type: none;
+  margin-left: 0;
+  color: rgba($primary, .5);
+  padding-top: 9px;
+  padding-left: 10px;
+
+  &:first-child {
+  counter-reset: customlistcounter;
+}
+
+  li {
+    counter-increment: customlistcounter;
+    margin-bottom: 0;
+
+    &:before {
+      content: "0" counter(customlistcounter) " ";
+      font-family: Montserrat, sans-serif;
+      float: left;
+      width: 3rem;
+    }
+  }
 }

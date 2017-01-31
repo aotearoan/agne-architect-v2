@@ -26,8 +26,9 @@
     "font-awesome": "fontawesome#4.6.3"
   },
   "dependencies": {
-    "angular": "1.5.8",
-    "angular-animate": "1.5.8",
-    "angular-route": "1.5.8"
+    "angular": "1.6.1",
+    "angular-animate": "1.6.1",
+    "angular-cookies": "1.6.1",
+    "angular-route": "1.6.1"
   }
 }

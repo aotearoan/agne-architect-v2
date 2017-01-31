@@ -5,6 +5,7 @@
     "vendorjs": [
       "app/vendors/angular/angular.js",
       "app/vendors/angular-animate/angular-animate.js",
+      "app/vendors/angular-cookies/angular-cookies.js",
       "app/vendors/angular-route/angular-route.js"
     ]
   }
