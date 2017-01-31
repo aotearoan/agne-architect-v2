@@ -37,7 +37,7 @@ angular.module('app.translation', []).service('translateService', function () {
             'Nationality': {'en': 'Nationality', 'de': 'Nationalität'},
             'Polish': {'en': 'Polish', 'de': 'Polnisch (fliessend)'},
             'Portfolio download': {'en': 'Portfolio download (DE)', 'de': 'Portfolio herunterladen'},
-            'portfolio': {'en': '', 'de': ''},
+            'portfolio': {'en': '2017.Portfolio_Agne Erickson.pdf', 'de': '2017.Portfolio_Agne Erickson.pdf'},
             'Projects': {'en': 'Projects', 'de': 'Projekte'},
             'Russian': {'en': 'Russian', 'de': 'Russisch (fliessend)'},
             'Skills': {'en': 'Skills', 'de': 'Kenntnisse'},
