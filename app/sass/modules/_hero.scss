@@ -37,28 +37,18 @@
 
 .mouse {
   display: block;
-  width: 26px;
-  height: 46px;
-  border-radius: 13px;
-  border: 2px solid $accent;
-  background-color: rgba($accent, .8);
+  width: 50px;
+  height: 40px;
+  background-color: $accent;
   position: absolute;
-  bottom: 40px;
+  bottom: 0;
   left: 50.7%;
   margin: 0 auto 0 -26px;
   cursor: pointer;
 
-  span {
+  i {
+    color: $base;
     display: block;
-    margin: 6px auto;
-    width: 2px;
-    height: 2px;
-    border-radius: 13px;
-    background: $base;
-    border: 1px solid transparent;
-    @include animation-duration(1s);
-    @include animation-fill-mode(both);
-    @include animation-iteration-count(infinite);
-    @include animation-name(scroll);
+    font-size: 4rem;
   }
 }
