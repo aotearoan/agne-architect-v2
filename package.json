@@ -26,7 +26,7 @@
     "url": "https://github.com/aotearoan/agne-architect-v2/issues"
   },
   "engine": {
-    "node": "6.7.0"
+    "node": "6.11.4"
   },
   "homepage": "https://github.com/aotearoan/agne-architect-v2#readme",
   "devDependencies": {
