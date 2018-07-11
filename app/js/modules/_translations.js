@@ -15,7 +15,6 @@ angular.module('app.translation', []).service('translateService', function () {
             'cv': {'en': '2017.BEWERBUNG_Agne Erickson.pdf', 'de': '2017.BEWERBUNG_Agne Erickson.pdf'},
             'CV download': {'en': 'CV download (DE)', 'de': 'CV herunterladen'},
             'Education': {'en': 'Education', 'de': 'Ausbildung'},
-            'EFH Uitikon': {'en': 'EFH Uitikon', 'de': 'EFH Uitikon'},
             'English': {'en': 'English', 'de': 'Englisch (fliessend)'},
             'Experience': {'en': 'Experience', 'de': 'Erfahrung'},
             'Expertise': {'en': 'Expertise', 'de': 'Fachkenntnisse'},
@@ -44,14 +43,6 @@ angular.module('app.translation', []).service('translateService', function () {
             'Thanks': {
                 'en': 'Thanks for taking the time to checkout my website. If you\'re interested in my work and would like to get in touch, feel free to contact me via the links below.',
                 'de': 'Vielen Dank, dass Sie sich die Zeit genommen haben, meine Website zu besuchen. Wenn Sie Interesse an meiner Arbeit haben und sich mit mir in Verbindung setzen möchten, zögern Sie nicht, mich über die untenstehenden Links zu kontaktieren.'
-            },
-            'Uitikon Paragraph 1': {
-                'en': 'Bei der Planung ihres Einfamilienhauses legte die Bauherrschaft grössten Wert auf Privatsphäre, und das, obwohl das Grundstück duch seine exponierte Steilhanglage alles andere als sichtgeschützt war. Die grösste Herausforderung war es daher, viel Aussicht mit wenig Einsicht zu planen.',
-                'de': 'Bei der Planung ihres Einfamilienhauses legte die Bauherrschaft grössten Wert auf Privatsphäre, und das, obwohl das Grundstück duch seine exponierte Steilhanglage alles andere als sichtgeschützt war. Die grösste Herausforderung war es daher, viel Aussicht mit wenig Einsicht zu planen.'
-            },
-            'Uitikon Paragraph 2': {
-                'en': 'Durch die vorgelagerten Terrassen mit Glasbrüstung und das Gartenmagazin im Obergeschoss, welches über eine Treppe zum Pool hinab führt, begleitet die Natur die Bewohner und gewährt gleichzeitig Schutz vor neugierigen Blicken.',
-                'de': 'Durch die vorgelagerten Terrassen mit Glasbrüstung und das Gartenmagazin im Obergeschoss, welches über eine Treppe zum Pool hinab führt, begleitet die Natur die Bewohner und gewährt gleichzeitig Schutz vor neugierigen Blicken.'
             },
             'Urban planning': {'en': 'Urban planning', 'de': 'Städtebauplanung'},
             'Zurich, Switzerland': {'en': 'Zurich, Switzerland', 'de': 'Zürich, Schweiz'}
